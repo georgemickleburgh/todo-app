@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Todo App</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="add_todo">Add Todo</string>
+    <string name="empty_message">No todos in the list</string>
+</resources>
