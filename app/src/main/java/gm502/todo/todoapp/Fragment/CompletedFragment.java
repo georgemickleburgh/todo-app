@@ -49,7 +49,7 @@ public class CompletedFragment extends Fragment {
      */
     public void renderTodos(ListView listView) {
         final ListView finalView = listView;
-        List<String> todos = provider.findAll();
+        List<String> todos = provider.findAllCompleted();
 
         if (!todos.isEmpty()) {
             // render the list
@@ -81,6 +81,13 @@ public class CompletedFragment extends Fragment {
             finalView.setAdapter(new ArrayAdapter<>(activity,
                     android.R.layout.simple_list_item_1,
                     todos.toArray(new String[]{})));
+        }
+    }
+
+    @Override public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser) {
+            renderTodos(taskView);
         }
     }
 

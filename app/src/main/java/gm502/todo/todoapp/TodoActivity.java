@@ -51,9 +51,6 @@ public class TodoActivity extends FragmentActivity {
 
         // Setup main app stuff
         provider = new TodoProvider(this);
-//        taskView = (ListView) findViewById(R.id.tasklist);
-//        taskView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-//        taskView.setEmptyView(findViewById(R.id.empty_message));
 
         // Drawer (Off-side navigation)
         setTitle("Todo List");
